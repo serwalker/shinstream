@@ -152,7 +152,7 @@ async def vplay(c: Client, m: Message):
                 await loser.delete()
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await c.send_photo(
-                    chat_id
+                    chat_id,
                     photo=f"{IMG_1}",
                     caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({link})\n💭 **Chat:** `{chat_id}`\n🎧 **Request by:** {requester}",
                     reply_markup=keyboard,
