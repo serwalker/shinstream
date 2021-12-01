@@ -29,7 +29,7 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton("❓ Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton("📣 Support", url=f"https://t.me/{GROUP_SUPPORT}"))
+                    InlineKeyboardButton("📣 Support", url=f"https://t.me/{GROUP_SUPPORT}")
                 ],
                 [
                     InlineKeyboardButton(
