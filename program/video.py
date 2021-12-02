@@ -154,7 +154,7 @@ async def vplay(c: Client, m: Message):
                 await c.send_photo(
                     chat_id,
                     photo=f"{IMG_1}",
-                    caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({link})\n💭 **Chat:** {m.chat.title}\n🎧 **Request by:** {requester}",
+                    caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({link})\n🎧 **Request by:** {requester}",
                     reply_markup=keyboard,
                 )
             else:
@@ -212,7 +212,7 @@ async def vplay(c: Client, m: Message):
                             await c.send_photo(
                                 chat_id,
                                 photo=f"{IMG_1}",
-                                caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** {m.chat.title}\n🎧 **Request by:** {requester}",
+                                caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({url})\n🎧 **Request by:** {requester}",
                                 reply_markup=keyboard,
                             )
                         else:
@@ -233,7 +233,7 @@ async def vplay(c: Client, m: Message):
                                 await c.send_photo(
                                     chat_id,
                                     photo=f"{IMG_2}",
-                                    caption=f"💡 **Video streaming started.**\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** {m.chat.title}\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                                    caption=f"💡 **Video streaming started.**\n\n🏷 **Name:** [{songname}]({url})\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
                                     reply_markup=keyboard,
                                 )
                             except Exception as ep:
@@ -269,7 +269,7 @@ async def vplay(c: Client, m: Message):
                         await c.send_photo(
                             chat_id,
                             photo=f"{IMG_1}",
-                            caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** {m.chat.title}\n🎧 **Request by:** {requester}",
+                            caption=f"💡 **Track added to queue »** `{pos}`\n\n🏷 **Name:** [{songname}]({url})\n🎧 **Request by:** {requester}",
                             reply_markup=keyboard,
                         )
                     else:
@@ -290,7 +290,7 @@ async def vplay(c: Client, m: Message):
                             await c.send_photo(
                                 chat_id,
                                 photo=f"{IMG_2}",
-                                caption=f"💡 **Video streaming started.**\n\n🏷 **Name:** [{songname}]({url})\n💭 **Chat:** {m.chat.title}\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                                caption=f"💡 **Video streaming started.**\n\n🏷 **Name:** [{songname}]({url})\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
