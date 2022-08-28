@@ -1,16 +1,26 @@
-import asyncio
+import requests
 from pytgcalls import idle
-from driver.veez import call_py, bot
+from callsmusic import run
+from handlers import __version__
+from pyrogram import Client as Bot
+from config import API_HASH, API_ID, BG_IMAGE, BOT_TOKEN
 
-async def mulai_bot():
-    print("[SHIN STREAM]: STARTING BOT CLIENT")
-    await bot.start()
-    print("[SHIN STREAM]: STARTING PYTGCALLS CLIENT")
-    await call_py.start()
-    await idle()
-    await pidle()
-    print("[SHIN STREAM]: STOPPING BOT & USERBOT")
-    await bot.stop()
 
-loop = asyncio.get_event_loop()
-loop.run_until_complete(mulai_bot())
+response = requests.get(BG_IMAGE)
+with open("./etc/foreground.png", "wb") as file:
+    file.write(response.content)
+
+
+bot = Bot(
+    ":memory:",
+    API_ID,
+    API_HASH,
+    bot_token=BOT_TOKEN,
+    plugins=dict(root="handlers"),
+)
+
+print(f"[INFO]: SHIN STREAM v{__version__} STARTED !")
+
+bot.start()
+run()
+idle()
